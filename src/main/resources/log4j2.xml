@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <appenders>
+        <File name="SearchFile" fileName="C:\Users\Admin\IdeaProjects\java_basics\ExceptionsDebuggingAndTesting\homework_1\ConsoleCustomerList\src\logs\queries.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %marker - %msg%n"/>
+            <Filters>
+                <MarkerFilter marker="INPUT_HISTORY" />
+            </Filters>
+        </File>
+        <File name="ErrorFile" fileName="C:\Users\Admin\IdeaProjects\java_basics\ExceptionsDebuggingAndTesting\homework_1\ConsoleCustomerList\src\logs\errors.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %marker - %msg%n"/>
+            <Filters>
+                <MarkerFilter marker="ERROR_HISTORY"/>
+            </Filters>
+        </File>
+    </appenders>
+
+    <loggers>
+        <root level="info">
+            <appender-ref ref="SearchFile" />
+            <appender-ref ref="ErrorFile"/>
+        </root>
+    </loggers>
+</configuration>
+
+
